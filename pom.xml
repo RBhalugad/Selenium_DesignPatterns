@@ -34,6 +34,13 @@
 			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Provides an implementation for SLF4J to fix the 'No SLF4J providers were found' warning -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.13</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
