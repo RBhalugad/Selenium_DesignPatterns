@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium Design Patterns - Full Suite" verbose="1" parallel="none">
+
+    <!-- Command Pattern -->
+    <test name="Command Pattern Tests">
+        <classes>
+            <class name="com.randhir.command.testCases.HomePageTest"/>
+        </classes>
+    </test>
+
+    <!-- Decorator Pattern -->
+    <test name="Decorator Pattern Tests">
+        <classes>
+            <class name="com.randhir.decorator.testCases.DashBoardPageTest"/>
+        </classes>
+    </test>
+
+    <!-- Execute Around Pattern -->
+    <test name="Execute Around Pattern Tests">
+        <classes>
+            <class name="com.randhir.executeAround.testCases.FrameTest"/>
+        </classes>
+    </test>
+
+    <!-- Factory Pattern -->
+    <test name="Factory Pattern Tests">
+        <classes>
+            <class name="com.randhir.factory.testCases.GoogleSearchTest"/>
+        </classes>
+    </test>
+
+    <!-- Proxy Pattern -->
+    <test name="Proxy Pattern Tests">
+        <classes>
+            <class name="com.randhir.proxy.testcases.PaymentScreentest"/>
+        </classes>
+    </test>
+
+    <!-- Strategy Pattern -->
+    <test name="Strategy Pattern Tests">
+        <classes>
+            <class name="com.randhir.strategy.testCases.PaymentScreentest"/>
+        </classes>
+    </test>
+
+    <!-- Template Pattern -->
+    <test name="Template Pattern Tests">
+        <classes>
+            <class name="com.randhir.template.testCases.ShoppingTest"/>
+        </classes>
+    </test>
+
+    <!-- General Test Cases -->
+    <test name="General Tests">
+        <classes>
+            <class name="com.randhir.testCases.GoogleTest"/>
+        </classes>
+    </test>
+
+</suite>
