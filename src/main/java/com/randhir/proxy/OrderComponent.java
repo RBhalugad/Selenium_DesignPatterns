@@ -2,6 +2,5 @@ package com.randhir.proxy;
 
 public interface OrderComponent {
 
-	public String placeOrder();
-
+  public String placeOrder();
 }

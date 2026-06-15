@@ -1,36 +1,33 @@
 package com.randhir.srp.main;
 
+import com.randhir.srp.common.SearchSuggestion;
+import com.randhir.srp.common.SearchWidget;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.randhir.srp.common.SearchSuggestion;
-import com.randhir.srp.common.SearchWidget;
-
 public class GoogleMainPage {
 
-	private WebDriver driver;
+  private WebDriver driver;
 
-	private SearchWidget searchWidget;
+  private SearchWidget searchWidget;
 
-	private SearchSuggestion searchSuggestion;
+  private SearchSuggestion searchSuggestion;
 
-	public GoogleMainPage(final WebDriver driver) {
-		this.driver = driver;
-		this.searchWidget = PageFactory.initElements(driver, SearchWidget.class);
-		this.searchSuggestion = PageFactory.initElements(driver, SearchSuggestion.class);
+  public GoogleMainPage(final WebDriver driver) {
+    this.driver = driver;
+    this.searchWidget = PageFactory.initElements(driver, SearchWidget.class);
+    this.searchSuggestion = PageFactory.initElements(driver, SearchSuggestion.class);
+  }
 
-	}
+  public void goTo() {
+    this.driver.get("https://www.google.com/");
+  }
 
-	public void goTo() {
-		this.driver.get("https://www.google.com/");
-	}
+  public SearchWidget getSearchWidget() {
+    return searchWidget;
+  }
 
-	public SearchWidget getSearchWidget() {
-		return searchWidget;
-	}
-
-	public SearchSuggestion getSearchSuggestion() {
-		return searchSuggestion;
-	}
-
+  public SearchSuggestion getSearchSuggestion() {
+    return searchSuggestion;
+  }
 }

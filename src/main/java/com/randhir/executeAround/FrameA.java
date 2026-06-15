@@ -4,33 +4,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class FrameA {
-	
-	@FindBy(name = "fn")
-	private WebElement firstName;
 
-	@FindBy(name = "ln")
-	private WebElement lastName;
+  @FindBy(name = "fn")
+  private WebElement firstName;
 
-	@FindBy(name = "addr")
-	private WebElement address;
+  @FindBy(name = "ln")
+  private WebElement lastName;
 
-	@FindBy(id = "area")
-	private WebElement message;
+  @FindBy(name = "addr")
+  private WebElement address;
 
-	public void setFirstName(String fName) {
-		this.firstName.sendKeys(fName);
-	}
+  @FindBy(id = "area")
+  private WebElement message;
 
-	public void setLastName(String lName) {
-		this.lastName.sendKeys(lName);
-	}
+  public void setFirstName(String fName) {
+    this.firstName.sendKeys(fName);
+  }
 
-	public void setAddress(String address) {
-		this.address.sendKeys(address);
-	}
+  public void setLastName(String lName) {
+    this.lastName.sendKeys(lName);
+  }
 
-	public void setMessage(String message) {
-		this.message.sendKeys(message);
-	}
+  public void setAddress(String address) {
+    this.address.sendKeys(address);
+  }
 
+  public void setMessage(String message) {
+    this.message.sendKeys(message);
+  }
 }

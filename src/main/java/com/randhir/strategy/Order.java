@@ -7,19 +7,18 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Order {
 
-	@FindBy(id = "buy")
-	private WebElement buyNowbutton;
+  @FindBy(id = "buy")
+  private WebElement buyNowbutton;
 
-	@FindBy(id = "ordernumber")
-	private WebElement orderNumber;
+  @FindBy(id = "ordernumber")
+  private WebElement orderNumber;
 
-	public Order(final WebDriver driver) {
-		PageFactory.initElements(driver, this);
-	}
+  public Order(final WebDriver driver) {
+    PageFactory.initElements(driver, this);
+  }
 
-	public String getOrderNumber() {
-		this.buyNowbutton.click();
-		return this.orderNumber.getText();
-	}
-
+  public String getOrderNumber() {
+    this.buyNowbutton.click();
+    return this.orderNumber.getText();
+  }
 }

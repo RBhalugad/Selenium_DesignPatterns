@@ -7,20 +7,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchSuggestion extends AbstractComponent {
 
-	@FindBy(css = "li.sbct")
-	private List<WebElement> suggestions;
+  @FindBy(css = "li.sbct")
+  private List<WebElement> suggestions;
 
-	public SearchSuggestion(final WebDriver driver) {
-		super(driver);
-	}
+  public SearchSuggestion(final WebDriver driver) {
+    super(driver);
+  }
 
-	public void clickSuggestioByIndex(int i) {
-		this.suggestions.get(i - 1).click();
-	}
+  public void clickSuggestioByIndex(int i) {
+    this.suggestions.get(i - 1).click();
+  }
 
-	@Override
-	public boolean isDisplayed() {
-		return this.wait.until((d) -> this.suggestions.size() > 5);
-	}
-
+  @Override
+  public boolean isDisplayed() {
+    return this.wait.until((d) -> this.suggestions.size() > 5);
+  }
 }

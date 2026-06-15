@@ -7,21 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OrderComponentReal implements OrderComponent {
 
-	@FindBy(id = "buy")
-	private WebElement buyNowbutton;
+  @FindBy(id = "buy")
+  private WebElement buyNowbutton;
 
-	@FindBy(id = "ordernumber")
-	private WebElement orderNumber;
+  @FindBy(id = "ordernumber")
+  private WebElement orderNumber;
 
-	public OrderComponentReal(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+  public OrderComponentReal(WebDriver driver) {
+    PageFactory.initElements(driver, this);
+  }
 
-	}
-
-	@Override
-	public String placeOrder() {
-		this.buyNowbutton.click();
-		return this.orderNumber.getText();
-	}
-
+  @Override
+  public String placeOrder() {
+    this.buyNowbutton.click();
+    return this.orderNumber.getText();
+  }
 }
